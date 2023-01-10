@@ -1,1 +1,1 @@
-# e2e-santa
+# e2e-santa project
