@@ -55,3 +55,9 @@ Cypress.Commands.add('acceptInvitation', (userNumber, inviteLink, wishes) => {
     })
   cy.clearCookies()
 })
+Cypress.Commands.add('runToss', () => {
+  cy.contains('Перейти к жеребьевке').click()
+  cy.contains('Провести жеребьевку').click({ force: true })
+  cy.contains('Да, провести жеребьевку').click({ force: true })
+  cy.contains('Жеребьевка проведена').should('be.visible')
+})
