@@ -4,7 +4,7 @@ const generalElements = require('../fixtures/pages/general.json')
 const dashboardPage = require('../fixtures/pages/dashboardPage.json')
 const invitePage = require('../fixtures/pages/invitePage.json')
 import { faker } from '@faker-js/faker'
-import { deleteBoxViaApi } from './utils'
+import { deleteBoxViaApi } from './deleteBoxViaAPI'
 
 describe('user can create a box and run it', () => {
   let newBoxName = faker.word.noun({ length: { min: 5, max: 10 } })
