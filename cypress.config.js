@@ -10,6 +10,7 @@ module.exports = defineConfig({
     baseUrl: 'https://santa-secret.ru/',
     testIsolation: false,
     chromeWebSecurity: false,
+    specPattern: 'cypress/e2e/**/*.feature',
     setupNodeEvents(on, config) {
       const bundler = createBundler({ plugins: [createEsbuildPlugin(config)] })
       on('file:preprocessor', bundler)
