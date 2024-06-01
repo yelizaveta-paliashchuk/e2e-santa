@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
-    "@faker-js/faker": "^7.6.0"
+    "@faker-js/faker": "^7.6.0",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
