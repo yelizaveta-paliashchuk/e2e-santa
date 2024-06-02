@@ -9,7 +9,7 @@ describe('connect to the test DB', () => {
   it('Input entries', () => {
     cy.task(
       'queryDb',
-      `INSERT INTO Students (StudentID, FirstName, StudentGroup, City varchar) VALUES 
+      `INSERT INTO Students (StudentID, FirstName, StudentGroup, City) VALUES 
             (1, "Oxana", "04-2024", "Barcelona"),
             (2, "Lisa", "06-2024", "Prague"),
             (3, "Savannah", "05-2024", "London"),
@@ -17,13 +17,13 @@ describe('connect to the test DB', () => {
             (5, "Anthony", "06-2024", "Brugges")`
     ).then((result) => {
       cy.log(JSON.stringify(result))
-      expect(result.affectedRows).to.equal(3)
+      expect(result.affectedRows).to.equal(5)
     })
   })
   it('Input entries', () => {
     cy.task(
       'queryDb',
-      `SELECT FirstName FROM Students WHERE StudentGroup = "06-2024")`
+      `SELECT FirstName FROM Students WHERE StudentGroup = "06-2024"`
     ).then((result) => {
       cy.log(JSON.stringify(result))
     })

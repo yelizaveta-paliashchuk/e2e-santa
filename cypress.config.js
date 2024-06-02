@@ -8,10 +8,10 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
   env: {
     db: {
-      host: 'db4free.net',
-      user: 'yelizaveta',
-      password: '1232123DB',
-      database: 'itswitcher',
+      host: 'sql7.freesqldatabase.com',
+      user: 'sql7711278',
+      password: 'T7xSmqa5ac',
+      database: 'sql7711278',
     },
   },
   e2e: {
